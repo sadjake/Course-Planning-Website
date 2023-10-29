@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/second.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+</head>
+<body>
+    <nav class="navbar navbar-dark red">
+        <div class="container-fluid">
+        <span style="font-size: 30;" class="navbar-brand mb-0 h4">Professor Results</span>
+        </div>
+    </nav>
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Professor</th>
+            <th scope="col">Section</th>
+            <th scope="col">Rating</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% set count = namespace(value=1) %}
+            {% for list in values %}
+                <tr>
+                    <th scope="row">{{ count.value }}</th>
+                    <td>{{ list[0] }}</td>
+                    <td>{{ list[1] }}</td>
+                    <td>{{ list[2] }}</td>
+                    {% set count.value = count.value + 1 %}
+                </tr>
+            {% endfor %}
+          <!-- <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr> -->
+        </tbody>
+      </table>
+    
+</body>
+</html>

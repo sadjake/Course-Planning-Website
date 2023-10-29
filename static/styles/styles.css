@@ -1,0 +1,106 @@
+/* html, body {
+    height:100%;
+    background-color: #666699;
+  }
+  
+  .container {
+    position: absolute;
+    left: 1;
+  }
+
+  .well {
+    background-color: #ffffee
+  }
+  
+  #content {
+    padding: 100px 100px 100px;  
+    width: 750px;
+  }
+  
+  .form-inline {
+    width: 100%;
+  }
+
+  .search-form {
+    border-radius: 30px 0 0 30px; 
+    width: 60%;
+  }
+
+  .form-online {
+    width: 100%;
+  }
+  
+  .input-group {
+    width:100%;
+  }
+  
+  input-group-btn {
+    max-width:38px;
+    width: 30px;
+  }
+  
+  #search {
+    border: 1px;
+  }
+  
+  .search-btn {
+    cursor:pointer;
+    border-radius: 0 30px 30px 0; 
+    background-color:#fff;
+    color:#669;
+    
+  }
+  
+  .text-center {
+    color: #fff;
+  } */
+html, body {
+  height: 90%;
+  background-image: url('timebackground.png');
+}
+
+html {
+  display: table;
+  margin: auto;
+}
+
+body {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.container {
+    padding: 1em;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    left: 0%;
+    overflow: hidden;
+}
+
+.input-group {
+  margin-top: 50%;
+}
+
+#search-input {
+  width: 650px;
+  margin-bottom: 10px;
+}
+
+#search-button {
+  width: 150px;
+  height: 75%;
+  margin-left: 3%;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
